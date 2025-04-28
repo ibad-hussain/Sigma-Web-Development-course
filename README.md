@@ -48,7 +48,7 @@ The course included numerous exercises after each major topic to ensure hands-on
 
 <br>
 
-## 🚀 List of Exercises
+## 🚀 Projects
 Throughout the course, I also built many small and big projects.
 <br>
 &emsp; ⮞ **Project 1:** Netflix Clone
