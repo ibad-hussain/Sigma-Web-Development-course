@@ -1,4 +1,4 @@
-# Python 100 Days of Code
+# Sigma Web Development
 ## 🚀 Overview
 This repository contains all my learning, exercises, and projects completed during the Sigma Web Development Course by CodeWithHarry on YouTube.
 He was the first one who taught me the core foundations of full-stack web development, and this course played a major role in building my skills from scratch.
