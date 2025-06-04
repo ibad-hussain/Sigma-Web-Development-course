@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --color: rgb(0, 255, 128);
+            --seccolor: rgb(0, 255, 42);
+            --opacity: 0.6;
+            --secopacity: 0.8;
+            /* --newcolor: rgb(0, 0, 255); */
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .nav {
+            background-color: aqua;
+            background-color: var(--color);
+        }
+        ul {
+            display: flex;
+        }
+        ul li {
+            list-style: none;
+            padding: 20px;
+            opacity: var(--opacity);
+        }
+        ul li:first-child {
+            background-color: var(--newcolor, red);
+        }
+        .content {
+            background-color: rgb(107, 107, 224);
+            background-color: var(--seccolor);
+            opacity: var(--secopacity);
+            border: 2px solid var(--newcolor);
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+    <br>
+    <div class="content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias necessitatibus laudantium sit tempora! Autem inventore et aperiam suscipit, facere, illum dignissimos neque quo rerum quos, reiciendis quaerat fugiat? Voluptates quidem reprehenderit unde at? Voluptatibus dolores deleniti tenetur corrupti fuga quibusdam temporibus sapiente perspiciatis quia voluptas?
+    </div>
+</body>
+</html>
