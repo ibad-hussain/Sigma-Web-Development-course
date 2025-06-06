@@ -1,0 +1,47 @@
+:root {
+    --bodycolor: #9affff;
+    --navcolor: orange;
+    --contentcolor: #fc7349;
+}
+/* :root {
+    --bodycolor: #bafc07;
+    --navcolor: rgb(112, 99, 73);
+    --contentcolor: #7a1d00;
+} */
+
+ul li {
+    list-style: none;
+}
+ul {
+    display: flex;
+    flex-direction: row;
+}
+.nav {
+    background-color: var(--navcolor);
+    /* font-weight: 550; */
+    font-weight: bolder;
+    font-size: 35px;
+    font-family: sans-serif;
+    /* padding: 0.1px; */
+    /* margin: 100px; */
+    position: sticky;
+    top: 8px;
+    width: 100vw;
+}
+li {
+    margin: 25px;
+}
+body {
+    background-color: var(--bodycolor);
+}
+.content {
+    font-family: sans-serif;
+    font-weight: bold;
+    width: 98vw;
+    padding: 6px;
+}
+.container {
+    background-color: var(--contentcolor);
+    margin-top: -20px;
+    width: 100vw;
+}
