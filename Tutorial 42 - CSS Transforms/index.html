@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            border: 2px solid red;
+            height: 80vh;
+        }
+        .box {
+            border: 2px solid black;
+            height: 90px;
+            width: 90px;
+            background-color: rgb(206, 154, 255);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: rotate(40deg);
+            transform: rotate(0.25turn);
+            transform: rotate3d(2, 3, 2, 45deg);
+            transform: rotateX(40deg);
+            transform: rotateY(40deg);
+            transform: rotateZ(40deg);
+            transform: scale(1.2);
+            transform: scale3d(1.5,1.5,1.5);
+            transform: scaleX(2);
+            transform: scaleY(2);
+            transform: skew(50deg);
+            transform: skewX(50deg);
+            transform: skewY(50deg);
+            transform: translate(20%);
+            transform: translate(20px);
+            transform: translate3d(20px,30px,0px);
+            transform: translateX(100%);
+            transform: translateY(100%);
+            transform: translateZ(0px);
+            transform-origin: 0% 0%;
+            transform: translateX(10%) translateY(20%) skewX(20deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">BOX</div>
+    </div>
+</body>
+</html>
