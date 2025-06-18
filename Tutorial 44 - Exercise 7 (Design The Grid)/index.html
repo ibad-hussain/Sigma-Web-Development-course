@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCISE 7 - DESIGN THIS GRID</title>
+    <style>
+        .nav {
+            height: 80px;
+            border: 2px solid black;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border: none;
+            
+        }
+        ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        ul li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        a {
+            text-decoration: none;
+        }
+        .nav a {
+            color: black;
+        }
+        .img1 {
+            margin-left: -70px;
+        }
+        .heading {
+            text-align: center;
+            font-size: 50px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 400;
+            color: rgb(31, 30, 30);
+            margin-top: 90px;
+        }
+        .head-bold {
+            font-weight: 700;
+        }
+        .content {
+            text-align: center;
+            font-size: 25px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* font-weight: 400; */
+            color: rgb(31, 30, 30);
+            margin-top: 20px;
+        }
+        .button {
+            text-align: center;
+            font-size: 14px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 800;
+            color: rgb(255, 255, 255);
+            background-color: rgb(84, 175, 236);
+            margin-left: auto;
+            margin-right: auto;
+            width: 300px;
+            border-radius: 5px;
+            padding-left: 5px;
+            padding-right: 5px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        .button a {
+            color: white;
+        }
+        .container {
+            border: 2px solid black;
+            border: none;
+            height: 700px;
+            display: grid;
+            grid-template-columns: 250px 250px 250px;
+            /* place-content: center; */
+            justify-content: center;
+            align-content: center;
+            justify-items: center;
+            align-items: center;
+            justify-self: center;
+            gap: 60px 70px;
+        }
+        .box {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* font-weight: 750; */
+            height: 100px;
+            width: 250px;
+            margin-top: 10px;
+            background-color: rgb(243, 243, 243);
+            border-radius: 10px;
+        }
+        .box div:first-child {
+            color: rgb(31, 30, 30);
+            font-size: 22px;
+            font-weight: 750;
+            text-align: center;
+            margin-top: 12px;
+            
+        }
+        .box div:nth-child(2) {
+            display: inline-block;
+            color: white;
+            font-weight: 600;
+            margin-top: 8px;
+            font-size: 12px;
+            margin-left: 21px;
+        }
+        .box div:nth-child(3) {
+            display: inline-block;
+            color: white;
+            font-weight: 600;
+            margin-top: 8px;
+            font-size: 12px;
+        }
+        .span1 a{
+            background-color: rgb(50, 135, 247);
+            color: rgb(255, 255, 255);
+            padding: 5px;
+            border-radius: 4.5px;
+        }
+        .span2 a{
+            background-color: rgb(3, 179, 62);
+            color: white;
+            padding: 5px;
+            border-radius: 4.5px;
+        }
+        .container2 {
+            margin-top: 10px;
+            height: 600px;
+            background-color: rgb(44, 42, 42);
+        }
+        /* @media screen and (max-width: 800px) {
+            .container {
+                grid-template-columns: 250px;
+            }
+        } */
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div class="img1">
+            <a href="https://www.ultraedit.com/downloads/ultraedit-download-thank-you/?utm_source=CWH&utm_medium=LeadsAcquisition&utm_content=UEDownload&utm_campaign=UETrialDownload"><img src="1.png" alt="" height="60"></a>
+        </div>
+        <ul>
+            <li><a href="https://www.ultraedit.com/downloads/ultraedit-download-thank-you/?utm_source=CWH&utm_medium=LeadsAcquisition&utm_content=UEDownload&utm_campaign=UETrialDownload"><span>Products</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none">
+                <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg></a></li>
+            <li><a href="https://www.ultraedit.com/downloads/ultraedit-download-thank-you/?utm_source=CWH&utm_medium=LeadsAcquisition&utm_content=UEDownload&utm_campaign=UETrialDownload"><span>Pricing</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none">
+                <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg></a></li>
+            <li><a href="https://www.ultraedit.com/downloads/ultraedit-download-thank-you/?utm_source=CWH&utm_medium=LeadsAcquisition&utm_content=UEDownload&utm_campaign=UETrialDownload"><span>Resources</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none">
+                <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg></a></li>
+            <li><a href="https://www.ultraedit.com/downloads/ultraedit-download-thank-you/?utm_source=CWH&utm_medium=LeadsAcquisition&utm_content=UEDownload&utm_campaign=UETrialDownload"><span>About us</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none">
+                <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg></a></li>
+            <li><a href="https://www.ultraedit.com/downloads/ultraedit-download-thank-you/?utm_source=CWH&utm_medium=LeadsAcquisition&utm_content=UEDownload&utm_campaign=UETrialDownload">Security and compliance</a></li>
+            <li><a href="https://www.ultraedit.com/downloads/ultraedit-download-thank-you/?utm_source=CWH&utm_medium=LeadsAcquisition&utm_content=UEDownload&utm_campaign=UETrialDownload"><img src="2.png" alt=""></a></li>
+        </ul>
+        <!-- <div class="img2">
+            <a href="https://www.ultraedit.com/downloads/ultraedit-download-thank-you/?utm_source=CWH&utm_medium=LeadsAcquisition&utm_content=UEDownload&utm_campaign=UETrialDownload"><img src="2.png" alt=""></a>
+        </div> -->
+    </div>
+    <div class="heading">
+        Download <span class="head-bold">UltraEdit</span> for Windows
+    </div>
+
+    <div class="content">
+        <div>Download and try UltraEdit before you buy it! This download includes the full Windows</div>version of the text editor.
+    </div>
+
+    <div class="button">
+        <a href="ue_english_64.exe">DOWNLOAD MAC OR LINUX VERSION</a>
+    </div>
+
+    <div class="container">
+        <div class="box box1">
+            <div>English</div>
+            <div class="span1"><a href="ue_english_64.exe">Download 32-bit</a></div>
+            <div class="span2"><a href="ue_english_64.exe">Download 64-bit</a></div>
+        </div>
+        <div class="box box2">
+            <div>Deutsch</div>
+            <div class="span1"><a href="ue_english_64.exe">Download 32-bit</a></div>
+            <div class="span2"><a href="ue_english_64.exe">Download 64-bit</a></div>
+        </div>
+        <div class="box box3">
+            <div>Italiano</div>
+            <div class="span1"><a href="ue_english_64.exe">Download 32-bit</a></div>
+            <div class="span2"><a href="ue_english_64.exe">Download 64-bit</a></div>
+        </div>
+        <div class="box box4">
+            <div>Español</div>
+            <div class="span1"><a href="ue_english_64.exe">Download 32-bit</a></div>
+            <div class="span2"><a href="ue_english_64.exe">Download 64-bit</a></div>
+        </div>
+        <div class="box box5">
+            <div>français</div>
+            <div class="span1"><a href="ue_english_64.exe">Download 32-bit</a></div>
+            <div class="span2"><a href="ue_english_64.exe">Download 64-bit</a></div>
+        </div>
+        <div class="box box6">
+            <div>Português brasileiro</div>
+            <div class="span1"><a href="ue_english_64.exe">Download 32-bit</a></div>
+            <div class="span2"><a href="ue_english_64.exe">Download 64-bit</a></div>
+        </div>
+        <div class="box box7">
+            <div>日本</div>
+            <div class="span1"><a href="ue_english_64.exe">Download 32-bit</a></div>
+            <div class="span2"><a href="ue_english_64.exe">Download 64-bit</a></div>
+        </div>
+        <div class="box box8">
+            <div>한국어</div>
+            <div class="span1"><a href="ue_english_64.exe">Download 32-bit</a></div>
+            <div class="span2"><a href="ue_english_64.exe">Download 64-bit</a></div>
+        </div>
+        <div class="box box9">
+            <div>中国</div>
+            <div class="span1"><a href="ue_english_64.exe">Download 32-bit</a></div>
+            <div class="span2"><a href="ue_english_64.exe">Download 64-bit</a></div>
+        </div>
+        <div class="box box10">
+            <div>中國</div>
+            <div class="span1"><a href="ue_english_64.exe">Download 32-bit</a></div>
+            <div class="span2"><a href="ue_english_64.exe">Download 64-bit</a></div>
+        </div>
+    </div>
+
+    <div class="container2">
+    </div>
+</body>
+</html>
