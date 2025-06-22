@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCISE 8 - BOUNCE ANIMATION</title>
+    <style>
+        .container {
+            position: relative;
+            height: 80vh;
+            width: 80vw;
+            background-color: blue;
+        }
+        .box {
+            height: 101px;
+            width: 101px;
+            background-color: red;
+            border-radius: 70px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            animation: AnimateX 3s linear infinite, AnimateY 1s ease-out infinite alternate;
+        }
+        @keyframes AnimateX {
+            from {
+                left: 0;
+            }
+            to {
+                left: 100%;
+            }
+        }
+        @keyframes AnimateY {
+            from {
+                bottom: 0;
+            }
+            to {
+                bottom: 100%;
+            }   
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+</html>
