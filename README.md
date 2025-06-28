@@ -7,7 +7,7 @@ Throughout this journey, I learned and practiced a wide range of technologies es
 <br>
 
 ## 🚀 Technologies Learned
-- **Frontend:** HTML5, CSS3, JavaScript (ES6+), React.js
+- **Frontend:** HTML5, CSS3, JavaScript (ES6+), React.js, Next.js 15
 - **Backend:** Node.js, Express.js
 - **Database:** MongoDB, Mongoose
 
