@@ -1,7 +1,6 @@
-# Sigma Web Development
+# Sigma Web Development Course
 ## 🚀 Overview
-This repository contains all my learning, exercises, and projects completed during the Sigma Web Development Course by CodeWithHarry on YouTube.
-He was the first one who taught me the core foundations of full-stack web development, and this course played a major role in building my skills from scratch.
+This repository contains all my learning, exercises, and projects completed during the Sigma Web Development Course by CodeWithHarry on YouTube. He was the first one who taught me the core foundations of full-stack web development, and this course played a major role in building my skills from scratch.
 Throughout this journey, I learned and practiced a wide range of technologies essential for modern web development.
 
 <br>
@@ -51,9 +50,9 @@ The course included numerous exercises after each major topic to ensure hands-on
 ## 🚀 Projects
 Throughout the course, I also built many small and big projects.
 <br>
-&emsp; ⮞ **Project 1:** Netflix Clone
+&emsp; ⮞ **Project 1:** Netflix UI Clone
 <br>
-&emsp; ⮞ **Project 2:** Spotify Clone
+&emsp; ⮞ **Project 2:** Spotify UI Clone
 
 <br>
 
