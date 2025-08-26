@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 13</title>
+    <style>
+        .container {
+            display: flex;
+            background-color: black;
+            padding: 8px;
+            height: 140px;
+            border-radius: 4px;
+        }
+
+        .duration {
+            background-color: rgba(rgba(0, 0, 0, 0.288), green, blue, alpha);
+            background-color: black;
+            border-radius: 5px;
+            padding: 2px;
+            color: white;
+            position: absolute;
+            top: 130px;
+            left: 218px;
+            opacity: 0.8;
+        }
+
+        .img>img {
+            border-radius: 10px;
+        }
+
+        .title {
+            font-size: 25px;
+            font-weight: 600;
+            margin: 6px;
+            color: white;
+        }
+
+        .details {
+            color: gray;
+            font-size: 15px;
+            margin: 6px;
+            margin-top: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="img">
+            <img class="image" src="" alt="">
+            <div class="duration">32:22</div>
+        </div>
+
+        <div class="others">
+            <div class="title"></div>
+            <div class="details"></div>
+        </div>
+    </div>
+    <script>
+        function createCard(title, cName, views, monthsOld, duration, thumbnail) {
+            document.querySelector(".duration").innerHTML = duration;
+            document.querySelector(".title").innerHTML = title;
+            if (views >= 1000000) views = views / 1000000 + "M";
+            else if (views >= 1000) views = views / 1000 + "K";
+            document.querySelector(".details").innerHTML = cName + " . " + views + " views . " + monthsOld + " months ago";
+            document.querySelector(".image").src = thumbnail;
+        }
+        createCard("Introduction to Backend | Sigma Web Dev veido #2", "CodeWithHarry", 58, 7, "31:22", "https://i.ytimg.com/vi/tVzUXW6siu0/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLACwWOixJVrKLFindK92kYMgTcQbw"); 
+    </script>
+</body>
+
+</html>
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic YT card</title>
+    <style>
+      *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            background-color: black;
+        }
+        .container{
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        
+            
+        }
+
+        .card{
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            padding: 10px; 
+            border-radius: 10px; 
+            /* background-color: rgb(45, 41, 41); */
+            height: 100px;
+            transition-duration: 0.15s;
+            margin-bottom: 20px;
+        }
+
+        .card:hover{
+            background-color: rgb(45, 41, 41);
+            cursor: pointer;
+        }
+        .card .left p{
+            position: relative;
+            bottom: 40px;
+            left: 120px;
+
+            background-color: black;
+            width: 40px;
+            color: white;
+            font-size: 15px;
+            border-radius: 5px;
+            text-align: center;
+            opacity: 0.6;
+        }
+
+        .card .left img{
+            border-radius: 10px;
+        }
+
+        .right .video-title{
+            margin-top: 5px;
+            font-weight:600;
+            font-size: 17px;
+            color: white;
+        }
+
+        .right p{
+            color: gray;
+            font-size: 14px;
+        }
+
+
+        .maincontainer{
+            display: grid;
+        }
+        #form{
+            display: flex;
+            flex-direction: column;
+            height: 300px;
+            width: 500px;
+            margin:10px auto;
+            justify-content: space-between;
+        }
+
+        #form input{
+            height: 30px;
+            font-size: 15px;
+            border-radius: 20px;
+            text-align: center;
+            outline: none;
+        }
+
+        #form input:focus{
+            background-color: rgb(171, 160, 160);
+            color:white;
+        }
+
+        #form button{
+            height: 30px;
+            border-radius: 20px;
+            background-color: rgb(87, 87, 253);
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            border: none;
+            transition-duration: 0.15s;
+            cursor: pointer;
+
+        }
+        #form button:hover{
+            background-color: rgb(65, 65, 244);
+        }
+
+    </style>
+</head>
+<body>
+    <h1 style="color: white; text-align: center;">Youtube Card Generator</h1>
+   <div class="maincontainer">
+    <div id="form">
+        <input type="text" name="title" id="title" placeholder="Enter thumbnail title">
+        <input type="text" name="cname" id="cname" placeholder="Enter channel name">
+        <input type="text" name="duration" id="duration" placeholder="Enter duration of video">
+        <input type="text" name="views" id="views" placeholder="Enter video views">
+        <input type="text" name="monthsold" id="monthsold" placeholder="Enter video month old">
+        <input type="text" name="thumbnail" id="thumbnail" placeholder="Enter thumbnail url">
+        <button onclick="getdata()">ADD VIDEO</button>
+    </div>
+    <div class="container">
+        
+    </div>
+
+   </div>
+
+    <script>
+        function createCard(title,cname,views,monthsold,duration,thumbnail)
+        {
+        let container = document.querySelector('.container');
+            let displayview;
+            if(views<1000){
+                displayview=views;
+            }
+            else if(views<1000000)
+            {
+                displayview=views/1000 + "k";
+            }
+            else if(views>1000000){
+                displayview=views/1000000 + "M";
+            }
+
+            let template=`<div class="card">
+                <div class="left">
+                        <img src="${thumbnail}" alt="">
+                        <p class="duration">${duration}</p>
+                    </div>
+                    
+
+                    <div class="right">
+                        <div class="video-title">${title}</div>
+                        <p>
+                            <span class="cname"> ${cname}</span>
+                            <span class="views">&bull; ${displayview} views</span>
+                            <span class="monthsold">&bull; ${monthsold} months ago</span>
+                        </p>
+                    </div>
+            </div>` ;
+
+        container.innerHTML=container.innerHTML+template;
+        }
+
+
+        // createCard(title,cname,views,monthsold,duration,thumbnail);
+        createCard('Example Card (your title goes here)','Channel name',200,8,'33:00',"https://i.ytimg.com/vi/tVzUXW6siu0/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLB0alxLSXCSEPITzWr-XXUiv1oglQ");
+
+
+        //to get form data and call create card method
+        function getdata(){
+            let title = document.getElementById('title').value;
+            let cname = document.getElementById('cname').value;
+            let duration = document.getElementById('duration').value;
+            let views = document.getElementById('views').value;
+            let monthsold = document.getElementById('monthsold').value;
+            let thumbnail = document.getElementById('thumbnail').value;
+            createCard(title,cname,views,monthsold,duration,thumbnail);
+        }
+    </script>
+</body>
+</html> -->
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 50vw;
+            height: 20vh;
+            border: 2px solid black;
+            margin: auto;
+            background-color: black;
+        }
+        .image{
+             width: 30%;
+            height: 90%;
+            object-fit: contain;
+            position: relative;
+            right: 0px;
+            top:5px
+        }
+        .name{
+            position: relative;
+           text-align: center;
+           bottom: 80px;
+           font-weight: 800;
+           color: aliceblue;
+        }
+        .view span{
+            position: relative;
+            left: 15vw;
+            bottom: 3vh;
+            font-size: 13px;
+            font-weight: 400;
+            color: rgb(128, 128, 128);
+        }
+           .view >span:nth-child(2){
+            position: relative;
+            left: 15vw;
+            bottom: 3vh;
+            font-size: 14px;
+            font-weight: 600;
+            color: rgb(128, 128, 128);
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+  <img src="https://i.ytimg.com/vi/Gis-2xA5z8I/maxresdefault.jpg" alt="image" class="image">
+<span class="name">Akhiyaan Gulaab (Song): Teri Baaton Mein Aisa Uljha Jiya
+</span>
+<div class="view">
+<span>60k views</span>
+<span>6 months ago</span>
+</div>
+</div>
+<script>
+function clickme(image,name, VI,mo){
+let a=document.querySelector(".box")
+a.insertAdjacentHTML("afterend", `<div class="box">
+  <img src="${image}" alt="image" class="image">
+<span class="name">${name}
+</span><div class="view">
+<span> ${VI}k views</span>
+<span> ${mo}months ago</span>
+</div>
+</div>`)
+}
+clickme("https://i.ytimg.com/vi/Gis-2xA5z8I/maxresdefault.jpg","Akhiyaan Gulaab (Song): Teri Baaton Mein Aisa Uljha Jiya", 10)
+
+</script>
+</body>
+</html> -->
+
+<!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 12</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+            {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .bigbox {
+            background-color: #0f0f0f;
+            width: 800px;
+            height: 120px;
+            color: white;
+            display: flex;
+        }
+
+        img {
+            border-radius: 10px;
+            height: 90px;
+            margin-left: 10px;
+        }
+
+        .img {
+            display: flex;
+            width: 180px;
+            align-items: center;
+        }
+
+        .duration {
+            font-family: Roboto;
+            background-color: rgba(0, 0, 0, 0.726);
+            padding: 3px;
+            font-size: 13px;
+            border-radius: 5px;
+            position: relative;
+            right: 40px;
+            top: 31px;
+        }
+
+        .content {
+            height: 100px;
+            width: 700px;
+            margin: auto auto auto 0;
+            font-family: Roboto;
+        }
+
+        .title {
+            margin-top: 7px;
+            font-size: 15px;
+        }
+
+        .others {
+            display: flex;
+            width: 500px;
+            height: 25px;
+            margin-top: 9px;
+            font-size: 13px;
+            color: #a4a4a4;
+        }
+
+        .channel {
+            padding: 0 2px 0 2px;
+        }
+
+        .views {
+            padding: 0 2px 0 2px;
+        }
+
+        .day {
+            padding: 0 2px 0 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="bigbox">
+            <div class="img">
+                <img src="" alt="" />
+                <div class="duration"></div>
+            </div>
+            <div class="content">
+                <div class="title"></div>
+                <div class="others">
+                    <div class="channel"></div>
+                    <div class="views"></div>
+                    <div class="day"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function createCard(title, cName, views, monthsOld, duration, thumbnail) {
+            document.querySelector(".img img").src = thumbnail
+            document.querySelector(".duration").textContent = duration;
+            document.querySelector(".title").textContent = title;
+            document.querySelector(".channel").textContent = cName + " • ";
+            document.querySelector(".views").textContent = Formatviews(views) + (" views") + " •  ";
+            document.querySelector(".day").textContent = monthsOld + (" months ago")
+
+        }
+        function Formatviews(views) {
+            if (views >= 1000) {
+                return (views / 1000).toFixed(2) + "K";
+            }
+            else if (views >= 1000000) {
+                return (views / 100000).toFixed(2) + "M";
+            }
+            else {
+                return views.toLocalString;
+            }
+        }
+
+        createCard("Installing VS Code & How Websites Work | Sigma Web Development Course -Tutorial #1", "CodeWithHarry", 727000, 2, "31:20", "https://i.ytimg.com/vi/tVzUXW6siu0/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLACwWOixJVrKLFindK92kYMgTcQbw")
+    </script>
+</body>
+
+</html> -->
