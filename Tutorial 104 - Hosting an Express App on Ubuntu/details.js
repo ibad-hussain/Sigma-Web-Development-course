@@ -1,0 +1,1 @@
+// Hosted Node JS app on the server machine (Ubuntu) using pm2 and nginx [on Hostinger]
