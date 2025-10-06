@@ -1,0 +1,10 @@
+.footer-all {
+    background-color: #111130;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 50px;
+    color: white;
+}
