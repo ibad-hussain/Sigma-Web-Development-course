@@ -53,6 +53,10 @@ Throughout the course, I also built many small and big projects.
 &emsp; ⮞ **Project 1:** Netflix UI Clone
 <br>
 &emsp; ⮞ **Project 2:** Spotify UI Clone
+<br>
+&emsp; ⮞ **Project 3:** URL Shortener
+<br>
+&emsp; ⮞ **Project 4:** Linktree Clone
 
 <br>
 
